@@ -8,6 +8,10 @@ var mongoose = require('mongoose');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var idRouter = require('./routes/id');
+var insertRouter = require('./routes/insert');
+var delRouter = require('./routes/del');
+var updateRouter = require('./routes/update');
 
 var app = express();
 
@@ -23,6 +27,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/id', idRouter);
+app.use('/insert',insertRouter);
+app.use('/update',updateRouter);
+app.use('/del',delRouter);
 
 var db = mongoose.connection;
 db.on('error', console.error);
