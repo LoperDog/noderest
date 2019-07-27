@@ -7,7 +7,6 @@ var logger = require('morgan');
 var mongoose = require('mongoose');
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
 var idRouter = require('./routes/id');
 var insertRouter = require('./routes/insert');
 var delRouter = require('./routes/del');
@@ -26,7 +25,6 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
 app.use('/id', idRouter);
 app.use('/insert',insertRouter);
 app.use('/update',updateRouter);
