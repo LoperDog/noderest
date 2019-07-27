@@ -23,12 +23,15 @@ Server API
 > parameter : { Id : string, Name : string } <br />
 > option parameter : { Level : number, Money : number} <br />
 > return Value : success - { Id, Name, Level, Money} <br />
-> fail - error or already exist
+> fail - error or already exist <br />
 ## del 유저 삭제
 > path : /del <br />
 > parameter : { Id : id } <br />
 > return Value : success - end <br />
-> fail : error or Cant find id
+> fail : error or Cant find id <br />
 ## update 유저 정보 수정
 > path : /update <br />
 > parameter : { Id : id } <br />
+> option parameter : { Name : string, Level : number, Money : number } <br />
+> retrurn Value : success - { Id, Name, Level, Money} <br />
+> fail - error or Cant find Id <br />
